@@ -20,5 +20,10 @@ docker build \
 sudo cp aws.sh /usr/local/bin/aws
 chmod +x /usr/local/bin/aws
 
+# export AWS_VERSION=1.15.49
+# aws anyservice anycmd
+# 
+# ---- change version
+# export AWS_VERSION=1.15.51
 # aws anyservice anycmd
 ```
