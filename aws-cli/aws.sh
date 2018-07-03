@@ -14,7 +14,7 @@ PROFILE=${AWS_PROFILE:-default}
 IMAGE=docker-factory-aws-cli:$VERSION
 
 # If the image does not exist locally, build it.
-if [[ ! -z $(docker images -q $IMAGE) ]]; then
+if [[ -z $(docker images -q $IMAGE) ]]; then
   git clone https://github.com/abdennour/containers-factory.git /tmp/containers-factory;
   cd /tmp/containers-factory/aws-cli;
   docker build \
