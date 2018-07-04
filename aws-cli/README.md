@@ -1,29 +1,24 @@
-# Build it as image
+# Install it
+
 
 ```sh
-docker build -t docker-factory-aws-cli:latest .
+sudo curl -o /usr/local/bin/aws https://cdn.rawgit.com/abdennour/containers-factory/latest/aws-cli/aws.sh && sudo chmod +x /usr/local/bin/aws
 ```
 
-**custom build**
+# Use it
 
+
+
+1.
 ```sh
-
-export AWS_VERSION=1.15.49
-docker build \
-       --build-arg AWS_VERSION=$AWS_VERSION \
-       -t docker-factory-aws-cli:$AWS_VERSION .
+export AWS_VERSION=1.15.50
+aws s3 ls
 ```
+===> it will create local docker image `docker-factory-aws-cli:1.15.50` and run "aws s3 ls"
 
-# Use it as container
-
+2.
 ```sh
-sudo cp aws.sh /usr/local/bin/aws
-chmod +x /usr/local/bin/aws
-
-# export AWS_VERSION=1.15.49
-# aws anyservice anycmd
-# 
-# ---- change version
-# export AWS_VERSION=1.15.51
-# aws anyservice anycmd
+export AWS_VERSION=1.15.50
+aws s3 ls
 ```
+Since the docker image  `docker-factory-aws-cli:1.15.50` was already created with the previous example, it will run "aws s3 ls" directly.
