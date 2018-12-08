@@ -2,7 +2,7 @@
 
 
 ```sh
-sudo curl -o /usr/local/bin/aws https://cdn.rawgit.com/abdennour/containers-factory/latest/aws-cli/aws.sh && sudo chmod +x /usr/local/bin/aws
+sudo curl -o /usr/local/bin/aws https://cdn.jsdelivr.net/gh/abdennour/containers-factory/aws-cli/aws.sh && sudo chmod +x /usr/local/bin/aws
 ```
 
 # Use it
